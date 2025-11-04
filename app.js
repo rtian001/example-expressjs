@@ -3,7 +3,7 @@ const fs = require("fs");
 const path = require("path");
 
 const server = http.createServer((req,  res) => { 
-  const filePath = path.join(__dirname, 'index.html');
+  const filePath = path.join(__dirname, 'README.md');
   fs.readFile(filePath, 'utf8', (err, data) => {
     if (err) {
       res.writeHead(204, { 'Content-Type': 'text/plain' });
